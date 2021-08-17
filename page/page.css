@@ -1,0 +1,286 @@
+#report {
+    text-align: middle;
+    width: max(60%, 768px);
+    position: absolute;
+    left: 50%;
+    margin-left: min(-30%, -389px);
+}
+
+#top {
+    text-align: middle;
+    display: flex;
+    height: 60px;
+    background-color: rgb(255, 249, 224);
+    border-bottom: 1px solid rgb(224, 198, 124);
+    align-items: center;
+}
+
+#personal {
+
+}
+
+#intro {
+
+}
+
+#map {
+
+}
+
+#pathtable {
+
+}
+
+#path_info {
+
+}
+
+#analysis {
+
+}
+
+#recommend {
+
+}
+
+#field {
+
+}
+
+#job {
+
+}
+
+#programm {
+
+}
+
+.title {
+    font-weight:bold;
+}
+
+.content {
+    font-weight:lighter;
+}
+
+.cell {
+    margin-top: 20px;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    height: 60px;
+    background-color: rgb(255, 249, 224);
+    border-bottom: 1px solid rgb(224, 198, 124);
+    align-items: center;
+}
+
+.title {
+    width: 50%;
+    position: relative;
+}
+
+.titletext {
+    display: flex;
+    font-family: 'MuseoModerno', cursive;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.welcometext {
+    display: flex;
+    float: right;
+    font-family: 'MuseoModerno', cursive;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+#logoutBtn {
+    margin-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    float: right;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 15px;
+}
+
+#loginBtn {
+    margin-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    float: left;
+    width: 60px;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 13px;
+}
+
+#signBtn {
+    margin-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    float: left;
+    width: 60px;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 13px;
+}
+
+.logintext {
+    display: flex;
+    float: right;
+    font-family: 'MuseoModerno', cursive;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.login {
+    position: relative;
+    right: -50%;
+}
+
+.loginBtn {
+    width:200px; 
+    height:40px; 
+    background-color:bisque;
+    vertical-align: middle;
+}
+
+.loginBtn:hover {
+    width:200px; 
+    height:40px; 
+    background-color: burlywood;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 25%;
+    height: 40%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    align-content: center;
+}
+  
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.signupTb {
+    padding: 10px;
+}
+
+.signupI {
+    width: 150px;
+    height: 20px;
+}
+
+.regiBtn {
+    width: 100px;
+    height: 30px;
+}
+
+.sitb{
+    margin: 20px;
+}
+
+  
+  /* @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  } */
+
+.descell {
+    width:350px;
+    padding-left: 10px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.tbline {
+    border: solid 10px rgba(0,0,0,0);
+}
+
+.block {
+    width:50px;
+    height:50px;
+}
+
+.basicB {
+    background-color: rgb(61,23,24);
+}
+
+.bounceB {
+    background-color: rgb(0,128,128);
+}
+
+.portalB {
+    background-color: rgb(55,238,17);
+}
+
+.destroyableB {
+    background-color: rgb(109,41,44);
+}
