@@ -44,6 +44,7 @@
 .recommend_cell {
     margin-left: 60px;
     margin-top: 42px;
+    margin-right: 60px;
 }
 
 .recommend_title {
@@ -60,9 +61,6 @@
     font-size: 14px;
 }
 
-#recommend {
-    width: 1024px;
-}
 
 .label {
     float: right;
@@ -74,6 +72,7 @@
     float: right;
     margin-left: 9px;
     margin-top: -3px;
+    font-size: 14px;
 }
 
 #circleB {
@@ -207,10 +206,6 @@ body {
 
     .maplocate {
         margin-left: calc(50% - 270px);
-    }
-    
-    #recommend {
-        width: calc(100% - 120px);
     }
     
     .content {
