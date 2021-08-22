@@ -2,64 +2,20 @@
 <html>
 
 <head>
-  <script src="js/p5.js"></script>
-  <script src="js/p5.dom.min.js"></script>
-  <script src="js/p5.sound.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;700&display=swap" rel="stylesheet">
   <link href="./page.css" rel="stylesheet"/>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
   <meta charset="utf-8">
 </head>
 
 <body>
-  <!--
-  <div id="header">
-  </div>
-  <div id="popup1" class="overlay">
-    <div class="popup">
-        <h2>Sign up</h2>
-        <div class="form">
-          <table class="sitb">
-            <tbody>
-              <tr>
-                <td class="signupTb">Name</td>
-                <td class="signupTb"><input id="nameInput" type="title" placeholder="Name" class="signupI"/></td>
-              </tr>
-              <tr>
-                <td class="signupTb">ID</td>
-                <td class="signupTb"><input id="idInput" type="title" placeholder="ID" class="signupI"/></td>
-              </tr>
-              <tr>
-                <td class="signupTb">Password</td>
-                <td class="signupTb"><input id="pwInput" type="password" placeholder="Password" class="signupI"/></td>
-              </tr>
-              <tr>
-                <td class="signupTb">Confirm Password</td>
-                <td class="signupTb"><input id="confirmInput" type="password" placeholder="Confirm" class="signupI"/></td>
-              </tr>
-              <tr>
-                <td style="text-align: center; padding-top: 20px;" colspan="2"><button id="regiBtn">Register</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <a class="close" href="#">&times;</a>
-    </div>
-  </div>
-  -->
   <div id="report">
     <div id="top">
-      AI 기반 종합 보고서
+      AI 기반 학습 &#183 진로 추천 보고서
     </div>
     <div id="personal" class="cell">
+      <div class="title">
+        개인정보
+      </div>
       <table id="per_info">
         <thead>
         </thead>
@@ -80,28 +36,31 @@
         이동 경로 분석
       </div>
       <div class="content">
-        이동 경로 지도에 대한 설명
+        <div class="maplocate">
+          <img src="map.svg" alt="지도" class="mapimg">
+          <img alt="path" class="mapimg" id="heatmap">
+        </div>
       </div>
-      <!--<script src="sketch.js"></script> 지도 들어갈 것 -->
     </div>
     <div id="pathtable" class="cell">
       <div class="title">
         관심 분야 분석
       </div>
+      <div class="label">
+        <div class="labelc">
+          또래 평균시간
+        </div>
+        <div id="circleG">
+        </div>
+        <div class="labelc">
+          나의 체류시간
+        </div>
+        <div id="circleB">
+        </div>
+      </div>
       <div>
         <table id="path_info">
           <thead>
-<!--            <tr>
-              <td rowspan="2"> 번호 </td>
-              <td rowspan="2"> 공간(Zone) </td>
-              <td colspan="3"> 체류시간 </td>
-            </tr>
-            <tr>
-              <td> 소요 시간 / 최소 필요시간 </td>
-              <td> &#37 </td>
-              <td> 또래 비교 </td>
-            </tr>
--->
           </thead>
           <tbody>
           </tbody>
@@ -119,38 +78,39 @@
       <div class="title">
         관련교육 및 진로체험 추천
       </div>
-      <div id="recommendc" class="content">
+      <div id="field" class="recommend_cell">
+        <div class="recommend_title">
+          주요 관심분야
+        </div>
+        <div id="fieldc" class="recommend_content">
+        </div>
+      </div>
+      <div id="major" class="recommend_cell">
+        <div class="recommend_title">
+          관련 학과
+        </div>
+        <div id="majorc" class="recommend_content">
+        </div>
+      </div>
+      <div id="job" class="recommend_cell">
+        <div class="recommend_title">
+          관련 직업
+        </div>
+        <div id="jobc" class="recommend_content">
+        </div>
+      </div>
+      <div id="programm" class="recommend_cell">
+        <div class="recommend_title">
+          추천 프로그램
+        </div>
+        <div id="programmc" class="recommend_content">
+        </div>
       </div>
     </div>
-    <div id="field" class="cell">
-      <div class="title">
-        관련 학과
-      </div>
-      <div id="fieldc" class="content">
-      </div>
-    </div>
-    <div id="job" class="cell">
-      <div class="title">
-        관련 직업
-      </div>
-      <div id="jobc" class="content">
-      </div>
-    </div>
-    <div id="programm" class="cell">
-      <div class="title">
-        추천 프로그램
-      </div>
-      <div id="programmc" class="content">
-      </div>
+    <div>
+      <img src="logo.svg" alt="NEXPERIUM" style="width:115px; float:right; margin: 50px 120px 32px 0"> 
     </div>
   </div>
-  <!--
-  <script src="sketch.js"></script>
-  <table id="blockdesc" style="float:right; padding-right:200px; padding-top:20px">
-    <thead></thead>
-    <tbody></tbody>
-  </table>
-  -->
 
   <script src="page.js"></script>
 </body>

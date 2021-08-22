@@ -1,286 +1,374 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 #report {
-    text-align: middle;
-    width: max(60%, 768px);
+    /*width: max(60%, 768px);
+    margin-left: min(-30%, -389px);*/
+    width: 1144px;
+    margin-left: -572px;
     position: absolute;
     left: 50%;
-    margin-left: min(-30%, -389px);
+    top: 64px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(139, 139, 139, 0.25);
 }
 
 #top {
-    text-align: middle;
-    display: flex;
-    height: 60px;
-    background-color: rgb(255, 249, 224);
-    border-bottom: 1px solid rgb(224, 198, 124);
-    align-items: center;
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    height: 110px;
+    background: linear-gradient(180deg, #FBE9C3 0%, rgba(251, 233, 195, 0) 100%);
 }
 
 #personal {
-
+    margin-top: 28px;
 }
 
-#intro {
-
+.mapimg {
+    position: absolute;
+    width: 540px;
+    margin-top: 30px;
 }
 
 #map {
-
+    margin-bottom: 708px;
 }
 
-#pathtable {
-
+.maplocate {
+    margin-left: 242px;
 }
 
-#path_info {
-
+.recommend_cell {
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 6px;
 }
 
-#analysis {
+.recommend_title {
+    font-weight: bold;
+    border-bottom: 1px solid #211816;
+    padding-bottom: 10px;
+}
 
+.recommend_content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #9F9F9F;
 }
 
 #recommend {
-
+    width: 1024px;
 }
 
-#field {
-
+.label {
+    float: right;
+    margin-right: 60px;
+    margin-top: 6px;
 }
 
-#job {
-
+.labelc {
+    float: right;
+    margin-left: 9px;
+    margin-top: -3px;
 }
 
-#programm {
+#circleB {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: #B9DAF9;
+    border-radius: 50%;
+}
 
+#circleG {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: #DDDDDD;
+    border-radius: 50%;
+    margin-left: 48px;
 }
 
 .title {
-    font-weight:bold;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 52px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: linear-gradient(#fff 50%, rgba(248, 234, 150, 0.73) 50%);
 }
 
 .content {
-    font-weight:lighter;
+    font-weight: normal;
+    margin-top: 20px;
+    font-size: 14px;
+    width: 1024px;
+    margin-left: 60px;
 }
 
 .cell {
-    margin-top: 20px;
+    margin-top: 60px;
 }
-
-
 
 body {
-    margin: 0;
+    background: #FAFAFA;
 }
 
-#header {
-    display: flex;
-    height: 60px;
-    background-color: rgb(255, 249, 224);
-    border-bottom: 1px solid rgb(224, 198, 124);
-    align-items: center;
+#per_info {
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: 60px;
 }
 
-.title {
-    width: 50%;
-    position: relative;
-}
-
-.titletext {
-    display: flex;
-    font-family: 'MuseoModerno', cursive;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-
-.welcometext {
-    display: flex;
-    float: right;
-    font-family: 'MuseoModerno', cursive;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    font-size: 20px;
-}
-
-#logoutBtn {
-    margin-left: 10px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    float: right;
-    font-family: 'MuseoModerno', cursive;
-    font-size: 15px;
-}
-
-#loginBtn {
-    margin-left: 10px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    float: left;
-    width: 60px;
-    font-family: 'MuseoModerno', cursive;
-    font-size: 13px;
-}
-
-#signBtn {
-    margin-left: 10px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: flex;
-    float: left;
-    width: 60px;
-    font-family: 'MuseoModerno', cursive;
-    font-size: 13px;
-}
-
-.logintext {
-    display: flex;
-    float: right;
-    font-family: 'MuseoModerno', cursive;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    font-size: 15px;
-}
-
-.login {
-    position: relative;
-    right: -50%;
-}
-
-.loginBtn {
-    width:200px; 
-    height:40px; 
-    background-color:bisque;
-    vertical-align: middle;
-}
-
-.loginBtn:hover {
-    width:200px; 
-    height:40px; 
-    background-color: burlywood;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 25%;
-    height: 40%;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    align-content: center;
-}
-  
-.popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
+.per_title {
     font-weight: bold;
-    text-decoration: none;
-    color: #333;
+    padding-right: 12px;
 }
 
-.popup .content {
-    max-height: 30%;
-    overflow: auto;
+.per_content {
+    font-weight: normal;
+    padding-right: 40px;
 }
 
-.signupTb {
-    padding: 10px;
+
+.path_title {
+    border-bottom:1px solid #211816;
+    padding-bottom: 12px;
+    font-weight: bold;
+    padding-top: 36px;
+    width: 500px;
 }
 
-.signupI {
-    width: 150px;
+.path_content {
+    border-bottom: 1px solid #9F9F9F;
+    width: 151px;
+}
+
+.path_name {
+    float: left;
+    margin-left: 9px;
+    margin-top: 32px;
+}
+
+.path_numbering {
+    float: left;
+    width: 20px;
     height: 20px;
+    background: #221917;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 12px; 
+    margin-top: 32px;
 }
 
-.regiBtn {
-    width: 100px;
-    height: 30px;
+.path_bars {
+    margin-left: 180px;
 }
 
-.sitb{
-    margin: 20px;
+.path_top {
+    margin-top: 19px;
+    margin-bottom: 6px;
 }
 
-  
-  /* @media screen and (max-width: 700px){
-    .box{
-      width: 70%;
+.path_bottom {
+    margin-bottom: 19px;
+}
+
+#path_info {
+    margin-left: 36px;
+    margin-top: 6px;
+    width: 1072px;
+    border-spacing: 24px 0;
+}
+
+@media (max-width: 1023px) {
+    #report {
+        /*width: max(60%, 768px);
+        margin-left: min(-30%, -389px);*/
+        width: 100%;
+        margin-left: -50%;
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        font-family: Noto Sans KR;
+        font-style: normal;
+        background: #fff;
     }
-    .popup{
-      width: 70%;
+    
+    #top {
+        padding-top: 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 26px;
+        height: 110px;
+        background: linear-gradient(180deg, #FBE9C3 0%, rgba(251, 233, 195, 0) 100%);
     }
-  } */
+    
+    #personal {
+        margin-top: 28px;
+    }
+    
+    .mapimg {
+        position: absolute;
+        width: 540px;
+        margin-top: 30px;
+    }
+    
+    #map {
+        margin-bottom: 708px;
+    }
 
-.descell {
-    width:350px;
-    padding-left: 10px;
-    font-family: 'MuseoModerno', cursive;
-}
-
-.tbline {
-    border: solid 10px rgba(0,0,0,0);
-}
-
-.block {
-    width:50px;
-    height:50px;
-}
-
-.basicB {
-    background-color: rgb(61,23,24);
-}
-
-.bounceB {
-    background-color: rgb(0,128,128);
-}
-
-.portalB {
-    background-color: rgb(55,238,17);
-}
-
-.destroyableB {
-    background-color: rgb(109,41,44);
+    .maplocate {
+        margin-left: calc(50% - 270px);
+    }
+    
+    .recommend_cell {
+        margin-left: 60px;
+        margin-top: 30px;
+        margin-bottom: 6px;
+    }
+    
+    .recommend_title {
+        font-weight: bold;
+        border-bottom: 1px solid #211816;
+        padding-bottom: 10px;
+    }
+    
+    .recommend_content {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #9F9F9F;
+    }
+    
+    #recommend {
+        width: calc(100% - 120px);
+    }
+    
+    .label {
+        float: right;
+        margin-right: 60px;
+        margin-top: 6px;
+    }
+    
+    .labelc {
+        float: right;
+        margin-left: 9px;
+        margin-top: -3px;
+    }
+    
+    #circleB {
+        float: right;
+        width: 20px;
+        height: 20px;
+        background: #B9DAF9;
+        border-radius: 50%;
+    }
+    
+    #circleG {
+        float: right;
+        width: 20px;
+        height: 20px;
+        background: #DDDDDD;
+        border-radius: 50%;
+        margin-left: 48px;
+    }
+    
+    .title {
+        font-weight: bold;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 52px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background: linear-gradient(#fff 50%, rgba(248, 234, 150, 0.73) 50%);
+    }
+    
+    .content {
+        font-weight: normal;
+        margin-top: 20px;
+        font-size: 14px;
+        width: calc(100% - 120px);
+        margin-left: 60px;
+    }
+    
+    .cell {
+        margin-top: 60px;
+    }
+    
+    body {
+        background: #FAFAFA;
+    }
+    
+    #per_info {
+        margin-top: 20px;
+        font-size: 14px;
+        margin-left: 60px;
+    }
+    
+    .per_title {
+        font-weight: bold;
+        padding-right: 12px;
+    }
+    
+    .per_content {
+        font-weight: normal;
+        padding-right: 40px;
+    }
+    
+    
+    .path_title {
+        border-bottom:1px solid #211816;
+        padding-bottom: 12px;
+        font-weight: bold;
+        padding-top: 36px;
+        width: 500px;
+    }
+    
+    .path_content {
+        border-bottom: 1px solid #9F9F9F;
+        width: 151px;
+    }
+    
+    .path_name {
+        float: left;
+        margin-left: 9px;
+        margin-top: 32px;
+    }
+    
+    .path_numbering {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: #221917;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        font-size: 12px; 
+        margin-top: 32px;
+    }
+    
+    .path_bars {
+        margin-left: 180px;
+    }
+    
+    .path_top {
+        margin-top: 19px;
+        margin-bottom: 6px;
+    }
+    
+    .path_bottom {
+        margin-bottom: 19px;
+    }
+    
+    #path_info {
+        margin-left: 36px;
+        margin-top: 6px;
+        width: calc(100% - 72px);
+        border-spacing: 24px 0;
+    }
 }
