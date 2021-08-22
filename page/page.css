@@ -18,7 +18,7 @@
     padding-top: 40px;
     text-align: center;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 24px;
     height: 110px;
     background: linear-gradient(180deg, #FBE9C3 0%, rgba(251, 233, 195, 0) 100%);
 }
@@ -43,20 +43,21 @@
 
 .recommend_cell {
     margin-left: 60px;
-    margin-top: 30px;
-    margin-bottom: 6px;
+    margin-top: 42px;
 }
 
 .recommend_title {
     font-weight: bold;
     border-bottom: 1px solid #211816;
     padding-bottom: 10px;
+    font-size: 16px;
 }
 
 .recommend_content {
     padding-top: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid #9F9F9F;
+    font-size: 14px;
 }
 
 #recommend {
@@ -89,7 +90,7 @@
     height: 20px;
     background: #DDDDDD;
     border-radius: 50%;
-    margin-left: 48px;
+    margin-left: 38px;
 }
 
 .title {
@@ -137,7 +138,7 @@ body {
 
 .path_title {
     border-bottom:1px solid #211816;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
     font-weight: bold;
     padding-top: 36px;
     width: 500px;
@@ -151,7 +152,12 @@ body {
 .path_name {
     float: left;
     margin-left: 9px;
-    margin-top: 32px;
+    margin-top: 31.5px;
+    font-size: 14px;
+}
+
+.path_time {
+    font-size: 12px;
 }
 
 .path_numbering {
@@ -164,6 +170,8 @@ body {
     text-align: center;
     font-size: 12px; 
     margin-top: 32px;
+    font-weight: normal;
+    border: none;
 }
 
 .path_bars {
@@ -173,10 +181,12 @@ body {
 .path_top {
     margin-top: 19px;
     margin-bottom: 6px;
+    height: 20px;
 }
 
 .path_bottom {
     margin-bottom: 19px;
+    height: 20px;
 }
 
 #path_info {
@@ -186,189 +196,28 @@ body {
     border-spacing: 24px 0;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1143px) {
     #report {
         /*width: max(60%, 768px);
         margin-left: min(-30%, -389px);*/
         width: 100%;
         margin-left: -50%;
-        position: absolute;
-        left: 50%;
         top: 0px;
-        font-family: Noto Sans KR;
-        font-style: normal;
-        background: #fff;
-    }
-    
-    #top {
-        padding-top: 40px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 26px;
-        height: 110px;
-        background: linear-gradient(180deg, #FBE9C3 0%, rgba(251, 233, 195, 0) 100%);
-    }
-    
-    #personal {
-        margin-top: 28px;
-    }
-    
-    .mapimg {
-        position: absolute;
-        width: 540px;
-        margin-top: 30px;
-    }
-    
-    #map {
-        margin-bottom: 708px;
     }
 
     .maplocate {
         margin-left: calc(50% - 270px);
     }
     
-    .recommend_cell {
-        margin-left: 60px;
-        margin-top: 30px;
-        margin-bottom: 6px;
-    }
-    
-    .recommend_title {
-        font-weight: bold;
-        border-bottom: 1px solid #211816;
-        padding-bottom: 10px;
-    }
-    
-    .recommend_content {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #9F9F9F;
-    }
-    
     #recommend {
         width: calc(100% - 120px);
     }
     
-    .label {
-        float: right;
-        margin-right: 60px;
-        margin-top: 6px;
-    }
-    
-    .labelc {
-        float: right;
-        margin-left: 9px;
-        margin-top: -3px;
-    }
-    
-    #circleB {
-        float: right;
-        width: 20px;
-        height: 20px;
-        background: #B9DAF9;
-        border-radius: 50%;
-    }
-    
-    #circleG {
-        float: right;
-        width: 20px;
-        height: 20px;
-        background: #DDDDDD;
-        border-radius: 50%;
-        margin-left: 48px;
-    }
-    
-    .title {
-        font-weight: bold;
-        display: inline-block;
-        font-size: 20px;
-        margin-left: 52px;
-        padding-left: 8px;
-        padding-right: 8px;
-        background: linear-gradient(#fff 50%, rgba(248, 234, 150, 0.73) 50%);
-    }
-    
     .content {
-        font-weight: normal;
-        margin-top: 20px;
-        font-size: 14px;
         width: calc(100% - 120px);
-        margin-left: 60px;
-    }
-    
-    .cell {
-        margin-top: 60px;
-    }
-    
-    body {
-        background: #FAFAFA;
-    }
-    
-    #per_info {
-        margin-top: 20px;
-        font-size: 14px;
-        margin-left: 60px;
-    }
-    
-    .per_title {
-        font-weight: bold;
-        padding-right: 12px;
-    }
-    
-    .per_content {
-        font-weight: normal;
-        padding-right: 40px;
-    }
-    
-    
-    .path_title {
-        border-bottom:1px solid #211816;
-        padding-bottom: 12px;
-        font-weight: bold;
-        padding-top: 36px;
-        width: 500px;
-    }
-    
-    .path_content {
-        border-bottom: 1px solid #9F9F9F;
-        width: 151px;
-    }
-    
-    .path_name {
-        float: left;
-        margin-left: 9px;
-        margin-top: 32px;
-    }
-    
-    .path_numbering {
-        float: left;
-        width: 20px;
-        height: 20px;
-        background: #221917;
-        border-radius: 50%;
-        color: #fff;
-        text-align: center;
-        font-size: 12px; 
-        margin-top: 32px;
-    }
-    
-    .path_bars {
-        margin-left: 180px;
-    }
-    
-    .path_top {
-        margin-top: 19px;
-        margin-bottom: 6px;
-    }
-    
-    .path_bottom {
-        margin-bottom: 19px;
     }
     
     #path_info {
-        margin-left: 36px;
-        margin-top: 6px;
         width: calc(100% - 72px);
-        border-spacing: 24px 0;
     }
 }

@@ -1,3 +1,6 @@
+let maxTime = 30;
+let maxLen = 290;
+
 //path analysis
 function fill_path_analysis() {
 	let desc = document.getElementById("analysisc");
@@ -167,12 +170,12 @@ async function fill_table1() {
 			tmpcont += "<div class='path_name'>" + tbcont1[step][1] + "</div>";
 			tmpcont += "<div class='path_bars'>";
 			tmpcont += "<div class='path_top'>";
-			tmpwidth = parseInt(tlength[tbcont1[step][0]-1][0] / 20 * 290).toString();
+			tmpwidth = parseInt(tlength[tbcont1[step][0]-1][0] / maxTime * maxLen).toString();
 			tmpcont += "<div style='float:left; height:20px; background-color:#B9DAF9; width:" + tmpwidth + "px; margin-right:10px'></div>";
 			tmpcont += "<div class='path_time'>" + tlength[tbcont1[step][0]-1][0] + "분</div>";
 			tmpcont += "</div>";
 			tmpcont += "<div class='path_bottom'>";
-			tmpwidth = parseInt(tlength[tbcont1[step][0]-1][1] / 20 * 290).toString();
+			tmpwidth = parseInt(tlength[tbcont1[step][0]-1][1] / maxTime * maxLen).toString();
 			tmpcont += "<div style='float:left; height:20px; background-color:#DDDDDD; width:" + tmpwidth + "px; margin-right:10px'></div>";
 			tmpcont += "<div class='path_time'>" + tlength[tbcont1[step][0]-1][1] + "분</div>";
 			tmpcont += "</div>";
@@ -213,12 +216,12 @@ async function fill_table2() {
 			tmpcont += "<div class='path_name'>" + tbcont2[step][1] + "</div>";
 			tmpcont += "<div class='path_bars'>";
 			tmpcont += "<div class='path_top'>";
-			tmpwidth = parseInt(tlength[tbcont2[step][0]-1][0] / 20 * 290).toString();
+			tmpwidth = parseInt(tlength[tbcont2[step][0]-1][0] / maxTime * maxLen).toString();
 			tmpcont += "<div style='float:left; height:20px; background-color:#B9DAF9; width:" + tmpwidth + "px; margin-right:10px'></div>";
 			tmpcont += "<div class='path_time'>" + tlength[tbcont2[step][0]-1][0] + "분</div>";
 			tmpcont += "</div>";
 			tmpcont += "<div class='path_bottom'>";
-			tmpwidth = parseInt(tlength[tbcont2[step][0]-1][1] / 20 * 290).toString();
+			tmpwidth = parseInt(tlength[tbcont2[step][0]-1][1] / maxTime * maxLen).toString();
 			tmpcont += "<div style='float:left; height:20px; background-color:#DDDDDD; width:" + tmpwidth + "px; margin-right:10px'></div>";
 			tmpcont += "<div class='path_time'>" + tlength[tbcont2[step][0]-1][1] + "분</div>";
 			tmpcont += "</div>";
@@ -231,12 +234,12 @@ async function fill_table2() {
 				tmpcont += "<div class='path_name'>" + tbcont2[step][3] + "</div>";
 				tmpcont += "<div class='path_bars'>";
 				tmpcont += "<div class='path_top'>";
-				tmpwidth = parseInt(tlength[tbcont2[step][2]-1][0] / 20 * 290).toString();
+				tmpwidth = parseInt(tlength[tbcont2[step][2]-1][0] / maxTime * maxLen).toString();
 				tmpcont += "<div style='float:left; height:20px; background-color:#B9DAF9; width:" + tmpwidth + "px; margin-right:10px'></div>";
 				tmpcont += "<div class='path_time'>" + tlength[tbcont2[step][2]-1][0] + "분</div>";
 				tmpcont += "</div>";
 				tmpcont += "<div class='path_bottom'>";
-				tmpwidth = parseInt(tlength[tbcont2[step][2]-1][1] / 20 * 290).toString();
+				tmpwidth = parseInt(tlength[tbcont2[step][2]-1][1] / maxTime * maxLen).toString();
 				tmpcont += "<div style='float:left; height:20px; background-color:#DDDDDD; width:" + tmpwidth + "px; margin-right:10px'></div>";
 				tmpcont += "<div class='path_time'>" + tlength[tbcont2[step][2]-1][1] + "분</div>";
 				tmpcont += "</div>";
@@ -329,7 +332,6 @@ async function get_heatmap() {
 }
 
 
-fill_path_analysis();
 fill_recommendation().catch(e => {console.log('There has been a problem with recommendation: ' + e.message)});
 //fill_table1().catch(e => {console.log('There has been a problem with table: ' + e.message)});
 fill_table();
