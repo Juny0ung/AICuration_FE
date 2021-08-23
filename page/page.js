@@ -247,14 +247,14 @@ let path_time_length = [
 	[3],
 	[3],
 	[3],
+	[15],
 	[3],
 	[3],
 	[3],
 	[3],
 	[3],
-	[3],
-	[3],
-	[3],
+	[20],
+	[30],
 	[3],
 	[3],
 	[3],
@@ -276,6 +276,8 @@ function fill_table() {
 
 async function fill_table1() {
 	let tlength = await get_table();
+
+	maxLen = window.innerWidth - 260;
 
 	let table = document.getElementById("path_info");
 	
@@ -310,6 +312,13 @@ async function fill_table1() {
 
 async function fill_table2() {
 	let tlength = await get_table();
+
+	windowWidth = window.innerWidth;
+	if (windowWidth > 1143) {
+		maxLen = 265;
+	} else {
+		maxLen = (window.innerWidth - 614) / 2;
+	}
 
 	let table = document.getElementById("path_info");
 	
@@ -384,7 +393,62 @@ let personal_info = {
 	"name": "홍길동"
 };
 
-async function fill_personal_info() {
+function fill_personal_info() {
+	let windowWidth = window.innerWidth;
+	if(windowWidth < 768) {
+		fill_personal_info1().catch(e => {console.log('There has been a problem with personal information: ' + e.message)});
+	} else {
+		fill_personal_info2().catch(e => {console.log('There has been a problem with personal information: ' + e.message)});
+	}
+
+}
+
+async function fill_personal_info1() {
+	let person = await get_personal_info();
+	let table = document.getElementById("per_info");
+
+	let newRow = table.insertRow(0);
+	let newCell1 = newRow.insertCell(0);
+	let newCell2 = newRow.insertCell(1);
+	newCell1.innerHTML = "방문일";
+	newCell1.setAttribute('class','per_title');
+	newCell2.innerHTML = person["year"] + "." + person["month"] + "." + person["day"];
+	newCell2.setAttribute('class','per_content');
+
+	newCell1 = newRow.insertCell(2);
+	newCell2 = newRow.insertCell(3);
+	newCell1.innerHTML = "학교";
+	newCell1.setAttribute('class','per_title');
+	newCell2.innerHTML = person["school"];
+	newCell2.setAttribute('class','per_content');
+
+	table = document.getElementById("per_info2");
+	newRow = table.insertRow(0);
+
+	newCell1 = newRow.insertCell(0);
+	newCell2 = newRow.insertCell(1);
+	newCell1.innerHTML = "이름";
+	newCell1.setAttribute('class','per_title');
+	newCell2.innerHTML = person["name"];
+	newCell2.setAttribute('class','per_content');
+
+	newCell1 = newRow.insertCell(2);
+	newCell2 = newRow.insertCell(3);
+	newCell1.innerHTML = "학년";
+	newCell1.setAttribute('class','per_title');
+	newCell2.innerHTML = person["grade"];
+	newCell2.setAttribute('class','per_content');
+
+	newCell1 = newRow.insertCell(4);
+	newCell2 = newRow.insertCell(5);
+	newCell1.innerHTML = "성별";
+	newCell1.setAttribute('class','per_title');
+	newCell2.innerHTML = person["gender"];
+	newCell2.setAttribute('class','per_content');
+
+}
+
+async function fill_personal_info2() {
 	let person = await get_personal_info();
 	let table = document.getElementById("per_info");
 
@@ -449,7 +513,7 @@ async function get_heatmap() {
 fill_recommendation().catch(e => {console.log('There has been a problem with recommendation: ' + e.message)});
 //fill_table1().catch(e => {console.log('There has been a problem with table: ' + e.message)});
 fill_table();
-fill_personal_info().catch(e => {console.log('There has been a problem with personal information: ' + e.message)});
+fill_personal_info();
 fill_heatmap().catch(e => {console.log('There has been a problem with map: ' + e.message)});
 // https://www.patrick-wied.at/static/heatmapjs/
 
@@ -457,9 +521,13 @@ fill_heatmap().catch(e => {console.log('There has been a problem with map: ' + e
 $(window).resize(function() {
 	let windowWidth = window.innerWidth;
 	$('#path_info').empty();
+	$('#per_info').empty();
+	$('#per_info2').empty();
 	if(windowWidth < 768) {
 		fill_table1().catch(e => {console.log('There has been a problem with table: ' + e.message)});
+		fill_personal_info1().catch(e => {console.log('There has been a problem with personal information: ' + e.message)});
 	} else {
 		fill_table2().catch(e => {console.log('There has been a problem with table: ' + e.message)});
+		fill_personal_info2().catch(e => {console.log('There has been a problem with personal information: ' + e.message)});
 	}
 })
