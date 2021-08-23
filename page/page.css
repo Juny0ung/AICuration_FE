@@ -41,6 +41,10 @@
     margin-left: 242px;
 }
 
+#field {
+    margin-top: 36px;
+}
+
 .recommend_cell {
     margin-left: 60px;
     margin-top: 42px;
@@ -139,7 +143,7 @@ body {
     border-bottom:1px solid #211816;
     padding-bottom: 10px;
     font-weight: bold;
-    padding-top: 36px;
+    padding-top: 42px;
     width: 500px;
 }
 
@@ -190,7 +194,7 @@ body {
 
 #path_info {
     margin-left: 36px;
-    margin-top: 6px;
+    margin-top: -3px;
     width: 1072px;
     border-spacing: 24px 0;
 }
