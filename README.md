@@ -1,5 +1,7 @@
 # AICuration_FE
 
+https://juny0ung.github.io/AICuration_FE/page/
+
 DB에 연결해야할 것
 
 > page.js만 수정하면 된다.
