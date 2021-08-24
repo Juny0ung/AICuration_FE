@@ -335,7 +335,7 @@ async function fill_table2() {
 			newName.setAttribute("class", "path_title");
 			newName.innerHTML = tbcont2[step][1];
 			if (tbcont2[step].length > 2) {
-				newName = newRow.insertCell(0);
+				newName = newRow.insertCell(1);
 				newName.setAttribute("class", "path_title");
 				newName.innerHTML = tbcont2[step][2];
 			} else {
