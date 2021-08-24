@@ -235,6 +235,10 @@ html {
 
 @media (max-width: 767px) {
 
+    #intro {
+        margin-top:95px;
+    }
+
     .cell {
         margin-top: 40px;
     }
@@ -293,7 +297,7 @@ html {
 
     #praisec {
         width: calc(100% - 160px);
-        margin-top: 22px;
+        margin-top: -12px;
         font-size: 14px;
         padding-right: 20px;
     }
@@ -330,7 +334,7 @@ html {
     }
 
     #small_logo {
-        margin: 32px 17px 0 30px;
+        margin: -2px 17px 0 30px;
     }
 
     #big_logo {
